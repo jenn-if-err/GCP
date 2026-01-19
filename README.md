@@ -24,8 +24,9 @@ quotas/
 
 ## Setup
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
-**Prerequisites:**
-### Install Terraform
+
+## Install Terraform
+### Install HashiCorp's GPG key.
 ```sh
 wget -O- https://apt.releases.hashicorp.com/gpg | \
 gpg --dearmor | \
@@ -42,7 +43,16 @@ gpg --no-default-keyring \
 ```sh
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 ```
+### update
+```sh
+sudo apt update
+```
+### install
+```sh
+sudo apt-get install terraform
+```
 
+**Prerequisites:**
 - GCP project with service account
 - Service account key JSON at `~/terraform-key.json`
 

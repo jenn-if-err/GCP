@@ -52,6 +52,19 @@ sudo apt update
 sudo apt-get install terraform
 ```
 
+## Alternative
+https://hasangural.com/github-codespaces-terraform
+
+### configure dev container
+```json
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/terraform:1": {}
+  }
+}
+```
+
 **Prerequisites:**
 - GCP project with service account
 - Service account key JSON at `~/terraform-key.json`

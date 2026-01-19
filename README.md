@@ -26,6 +26,11 @@ quotas/
 
 **Prerequisites:**
 - Terraform installed
+```sh
+wget -O- https://apt.releases.hashicorp.com/gpg | \
+gpg --dearmor | \
+sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
+```
 - GCP project with service account
 - Service account key JSON at `~/terraform-key.json`
 

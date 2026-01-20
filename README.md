@@ -13,15 +13,6 @@ Provisions N number of e2-micro instances in GCP using Terraform. Uses count met
 - Debian 11
 - Region: asia-northeast1-c
 
-## Structure
-
-```
-quotas/
-├── main.tf              # Main config
-├── variables.tf         # Variable declarations
-└── terraform.tfvars     # Your values
-```
-
 ## Setup
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 

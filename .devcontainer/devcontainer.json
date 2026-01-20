@@ -1,13 +1,7 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
-<<<<<<< HEAD
-    "ghcr.io/devcontainers/features/terraform:1": {}
-  }
-}
-=======
     "ghcr.io/devcontainers/features/terraform:1": {},
     "ghcr.io/dhoeric/features/google-cloud-cli:1": {}
   }
 }
->>>>>>> ef6cdf2 (Update devcontainer.json and README.md to include Google Cloud CLI feature)

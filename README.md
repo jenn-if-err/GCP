@@ -67,14 +67,17 @@ https://hasangural.com/github-codespaces-terraform
 ```
 
 
-## GCP project with service account
-- Service account key JSON at `~/terraform-key.json`
+## Authentication
 
-**Usage:**
+Authenticate with GCP using gcloud:
+```bash
+gcloud auth application-default login
+```
+
+## Usage
 
 ```bash
-# Update terraform.tfvars with your project_id
-# Adjust instance_count as needed
+# Update terraform.tfvars with your project_id and instance_count
 
 terraform init
 terraform plan

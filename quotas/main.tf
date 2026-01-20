@@ -1,7 +1,6 @@
 provider "google" {
-  project     = var.project_id
-  region      = "asia-northeast1-c"
-  credentials = file("~/terraform-key.json")
+  project = var.project_id
+  region  = "asia-northeast1-c"
 }
 
 resource "google_compute_instance" "vm_example" {

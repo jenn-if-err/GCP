@@ -1,6 +1,6 @@
 # GCP Compute Instance Provisioning
 
-Terraform module for spinning up multiple GCP compute instances. Built this to test quota limits and demonstrate IaC practices.
+Terraform module for spinning up multiple GCP compute instances.
 
 ## What it does
 

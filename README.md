@@ -4,7 +4,7 @@ Terraform module for spinning up multiple GCP compute instances. Built this to t
 
 ## What it does
 
-Provisions N number of e2-micro instances in GCP using Terraform. Uses count meta-argument for dynamic instance creation, all named with `quota-vm-{index}` pattern.
+Provisions N number of e2-micro instances in GCP using Terraform. Uses count meta-argument for dynamic instance creation, all named with `vm-{index}` pattern.
 
 ## Stack
 

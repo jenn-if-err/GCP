@@ -60,13 +60,14 @@ https://hasangural.com/github-codespaces-terraform
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
-    "ghcr.io/devcontainers/features/terraform:1": {}
+    "ghcr.io/devcontainers/features/terraform:1": {},
+    "ghcr.io/dhoeric/features/google-cloud-cli:1": {}
   }
 }
 ```
 
-**Prerequisites:**
-- GCP project with service account
+
+## GCP project with service account
 - Service account key JSON at `~/terraform-key.json`
 
 **Usage:**

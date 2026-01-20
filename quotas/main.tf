@@ -1,7 +1,3 @@
-variable "instance_count" {
-  default = 24
-}
-
 provider "google" {
   project     = var.project_id
   region      = "asia-northeast1-c"

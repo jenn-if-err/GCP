@@ -1,10 +1,10 @@
 # GCP Compute Instance Provisioning
 
-Terraform module for spinning up multiple GCP compute instances. Built this to test quota limits and demonstrate IaC practices.
+Terraform module for spinning up multiple GCP compute instances.
 
 ## What it does
 
-Provisions N number of e2-micro instances in GCP using Terraform. Uses count meta-argument for dynamic instance creation, all named with `quota-vm-{index}` pattern.
+Provisions N number of e2-micro instances in GCP using Terraform. Uses count meta-argument for dynamic instance creation, all named with `vm-{index}` pattern.
 
 ## Stack
 
@@ -12,15 +12,6 @@ Provisions N number of e2-micro instances in GCP using Terraform. Uses count met
 - GCP Compute Engine (e2-micro instances)
 - Debian 11
 - Region: asia-northeast1-c
-
-## Structure
-
-```
-quotas/
-├── main.tf              # Main config
-├── variables.tf         # Variable declarations
-└── terraform.tfvars     # Your values
-```
 
 ## Setup
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
@@ -60,20 +51,24 @@ https://hasangural.com/github-codespaces-terraform
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
-    "ghcr.io/devcontainers/features/terraform:1": {}
+    "ghcr.io/devcontainers/features/terraform:1": {},
+    "ghcr.io/dhoeric/features/google-cloud-cli:1": {}
   }
 }
 ```
 
-**Prerequisites:**
-- GCP project with service account
-- Service account key JSON at `~/terraform-key.json`
 
-**Usage:**
+## Authentication
+
+Authenticate with GCP using gcloud:
+```bash
+gcloud auth application-default login
+```
+
+## Usage
 
 ```bash
-# Update terraform.tfvars with your project_id
-# Adjust instance_count as needed
+# Update terraform.tfvars with your project_id and instance_count
 
 terraform init
 terraform plan

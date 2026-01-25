@@ -1,16 +1,11 @@
-variable "instance_count" {
-  default = 24
-}
-
 provider "google" {
-  project     = var.project_id
-  region      = "asia-northeast1-c"
-  credentials = file("~/terraform-key.json")
+  project = var.project_id
+  region  = "asia-northeast1-c"
 }
 
 resource "google_compute_instance" "vm_example" {
   count        = var.instance_count
-  name         = "quota-vm-${count.index}"
+  name         = "vm-${count.index}"
   machine_type = "e2-micro"
   zone         = "asia-northeast1-c"
 

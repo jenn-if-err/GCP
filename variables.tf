@@ -1,2 +1,4 @@
 variable "project_id" {}
-variable "instance_count" {}
+variable "instance_count" {
+  default = 24
+}
